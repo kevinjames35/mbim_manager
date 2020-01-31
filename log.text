@@ -1,0 +1,130 @@
+lanner@lanner:~/Documents/libmbim$ sudo mbimcli -d /dev/cdc-wdm0 -p -v --query-signal-state
+[sudo] password for lanner: 
+[31  一  2020, 16:41:37] [Debug] opening device...
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Read max control message size from descriptors file: 4096
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message...
+<<<<<< RAW:
+<<<<<<   length = 88
+<<<<<<   data   = 03:00:00:00:58:00:00:00:01:00:00:00:01:00:00:00:00:00:00:00:83:8C:F7:FB:8D:0D:4D:7F:87:1E:D7:1D:BE:FB:B3:9B:01:00:00:00:01:00:00:00:28:00:00:00:0C:00:00:00:1A:00:00:00:1E:00:00:00:2F:00:64:00:65:00:76:00:2F:00:63:00:64:00:63:00:2D:00:77:00:64:00:6D:00:30:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message (translated)...
+<<<<<< Header:
+<<<<<<   length      = 88
+<<<<<<   type        = command (0x00000003)
+<<<<<<   transaction = 1
+<<<<<< Fragment header:
+<<<<<<   total   = 1
+<<<<<<   current = 0
+<<<<<< Contents:
+<<<<<<   service = 'proxy-control' (838cf7fb-8d0d-4d7f-871e-d71dbefbb39b)
+<<<<<<   cid     = 'configuration' (0x00000001)
+<<<<<<   type    = 'set' (0x00000001)
+<<<<<< Fields:
+<<<<<<   DevicePath = '/dev/cdc-wdm0'
+<<<<<<   Timeout = '30'
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message...
+>>>>>> RAW:
+>>>>>>   length = 48
+>>>>>>   data   = 03:00:00:80:30:00:00:00:01:00:00:00:01:00:00:00:00:00:00:00:83:8C:F7:FB:8D:0D:4D:7F:87:1E:D7:1D:BE:FB:B3:9B:01:00:00:00:00:00:00:00:00:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message (translated)...
+>>>>>> Header:
+>>>>>>   length      = 48
+>>>>>>   type        = command-done (0x80000003)
+>>>>>>   transaction = 1
+>>>>>> Fragment header:
+>>>>>>   total   = 1
+>>>>>>   current = 0
+>>>>>> Contents:
+>>>>>>   status error = 'None' (0x00000000)
+>>>>>>   service      = 'proxy-control' (838cf7fb-8d0d-4d7f-871e-d71dbefbb39b)
+>>>>>>   cid          = 'configuration' (0x00000001)
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message...
+<<<<<< RAW:
+<<<<<<   length = 16
+<<<<<<   data   = 01:00:00:00:10:00:00:00:02:00:00:00:00:10:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message (translated)...
+<<<<<< Header:
+<<<<<<   length      = 16
+<<<<<<   type        = open (0x00000001)
+<<<<<<   transaction = 2
+<<<<<< Contents:
+<<<<<<   max control transfer = 4096
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message...
+>>>>>> RAW:
+>>>>>>   length = 16
+>>>>>>   data   = 01:00:00:80:10:00:00:00:02:00:00:00:00:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] MBIM Device at '/dev/cdc-wdm0' ready
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message...
+<<<<<< RAW:
+<<<<<<   length = 48
+<<<<<<   data   = 03:00:00:00:30:00:00:00:03:00:00:00:01:00:00:00:00:00:00:00:A2:89:CC:33:BC:BB:8B:4F:B6:B0:13:3E:C2:AA:E6:DF:0B:00:00:00:00:00:00:00:00:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message (translated)...
+<<<<<< Header:
+<<<<<<   length      = 48
+<<<<<<   type        = command (0x00000003)
+<<<<<<   transaction = 3
+<<<<<< Fragment header:
+<<<<<<   total   = 1
+<<<<<<   current = 0
+<<<<<< Contents:
+<<<<<<   service = 'basic-connect' (a289cc33-bcbb-8b4f-b6b0-133ec2aae6df)
+<<<<<<   cid     = 'signal-state' (0x0000000b)
+<<<<<<   type    = 'query' (0x00000000)
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message...
+>>>>>> RAW:
+>>>>>>   length = 68
+>>>>>>   data   = 03:00:00:80:44:00:00:00:03:00:00:00:01:00:00:00:00:00:00:00:A2:89:CC:33:BC:BB:8B:4F:B6:B0:13:3E:C2:AA:E6:DF:0B:00:00:00:00:00:00:00:14:00:00:00:63:00:00:00:63:00:00:00:05:00:00:00:02:00:00:00:FF:FF:FF:FF
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message (translated)...
+>>>>>> Header:
+>>>>>>   length      = 68
+>>>>>>   type        = command-done (0x80000003)
+>>>>>>   transaction = 3
+>>>>>> Fragment header:
+>>>>>>   total   = 1
+>>>>>>   current = 0
+>>>>>> Contents:
+>>>>>>   status error = 'None' (0x00000000)
+>>>>>>   service      = 'basic-connect' (a289cc33-bcbb-8b4f-b6b0-133ec2aae6df)
+>>>>>>   cid          = 'signal-state' (0x0000000b)
+>>>>>> Fields:
+>>>>>>   Rssi = '99'
+>>>>>>   ErrorRate = '99'
+>>>>>>   SignalStrengthInterval = '5'
+>>>>>>   RssiThreshold = '2'
+>>>>>>   ErrorRateThreshold = '4294967295'
+
+[/dev/cdc-wdm0] Signal state:
+	          RSSI [0-31,99]: '99'
+	     Error rate [0-7,99]: '99'
+	Signal strength interval: '5'
+	          RSSI threshold: '2'
+	    Error rate threshold: 'unspecified'
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message...
+<<<<<< RAW:
+<<<<<<   length = 12
+<<<<<<   data   = 02:00:00:00:0C:00:00:00:04:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Sent message (translated)...
+<<<<<< Header:
+<<<<<<   length      = 12
+<<<<<<   type        = close (0x00000002)
+<<<<<<   transaction = 4
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] Received message...
+>>>>>> RAW:
+>>>>>>   length = 16
+>>>>>>   data   = 02:00:00:80:10:00:00:00:04:00:00:00:00:00:00:00
+
+[31  一  2020, 16:41:37] [Debug] [/dev/cdc-wdm0] channel destroyed
+[31  一  2020, 16:41:37] [Debug] Device closed
+lanner@lanner:~/Documents/libmbim$ 
+
